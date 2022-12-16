@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+:root {
+  --background-color: #efe7e5;
+  --text-color: black;
+}
+
+body {
+  margin: 3% 15%;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+p {
+  line-height: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap;
+  list-style-type: none;
+  font-weight: 500;
+}
+nav li {
+  position: relative;
+  margin-left: 40px;
+  font-size: 15px;
+  cursor: pointer;
+}
+nav li span {
+  position: absolute;
+  top: -5px;
+  right: -28px;
+}
+
+
+header {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+header .header-left {
+  flex: 6;
+  margin-right: 50px;
+}
+header .header-left small {
+  font-weight: bold;
+  display:flex;
+  align-items:center;
+}
+header .header-left h1 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-top:15px;
+}
+header .header-left .links {
+  margin-top: 80px;
+}
+header .header-left .links a {
+  text-decoration:none;
+  color:inherit;
+  position: relative;
+  margin-right: 40px;
+  font-weight: bold;
+}
+header .header-left .links a i  {
+  position: absolute;
+  top: -15px;
+  right: -5px;
+}
+
+
+
+header .header-right {
+  flex: 5;
+}
+header .header-right img {
+  width: 100%;
+  border-radius: 50%;
+
+}
+
+.about {
+  margin-top: 150px;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.images {
+  margin-top: 60px;
+}
+.images .image-card {
+  display:flex;
+  align-items:center;
+  margin-bottom: 60px;
+}
+.images .image-card .image-left {
+  margin-right: 40px;
+}
+.images .image-card .image-left img {
+  height: 200px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 100px;
+}
+footer p {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 880px) {
+  .images .image-card {
+    flex-wrap:wrap;
+  }
+}
+
+@media screen and (max-width: 621px) {
+  header {
+    flex-direction: column-reverse
+  }
+  header .header-left {
+    margin-right: 0;
+  }
+  header .header-right {
+    margin-bottom: 40px;
+  }
+  header .header-right img {
+    width: 250px;
+  }
+
+  .images .image-card .image-left img {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 32px;
+  right: 30px;
+  top: -5px;
+}
+
+
+.btn-2 {
+  color: #000;
+}
+
+.btn-2::after,
+.btn-2::before {
+  border: 3px solid ;
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn-2:hover::after {
+  transform: translate(-5px, -5px);
+}
+
+.btn-2:hover::before {
+  transform: translate(5px, 5px);
+}
+
+
+
+
+
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: rgb(160, 160, 160);
+  border: rgb(160, 160, 160);;
+  height: 40px;
+  width: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.336);
+ 
+}
+
+.go-top-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.typewriter{
+  position: relative;
+}
+.typewriter::after{
+  content: '|';
+  position: absolute;
+  right: 0;
+  background-color:  var(--background-color);
+  width: 100%;
+  animation: typing 3s steps(14) alternate infinite;
+}
+@keyframes typing{
+  to{
+      width: 15%;
+  }
+}
+@keyframes line {
+  50%{
+      color: transparent;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #cfcfcf;
+  border: 8px solid #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9c9a9a;
+  border-radius: 10px;
+  border: 4px solid #fff;
+
+}
+
+
+
+
+
+
+  .carousel-wrapper {
+    width: 850px;
+    left: 45px;
+  position: relative;
+  }
+  .owl-carousel .owl-nav {
+    overflow: hidden;
+    height: 0px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #5a5959;
+    
+  }
+  
+  .owl-carousel .item {
+    text-align: center;
+  }
+
+  .owl-carousel .item{
+    padding-left: 5px;
+    transition: transform 0.25s;
+    
+  }
+  
+  .owl-carousel .item:hover{
+    transform:scale(1.05);
+  }
+  .owl-carousel .nav-button {
+    height: 50px;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 110px !important;
+  }
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.25;
+  }
+  .owl-carousel .owl-prev {
+    left: -30px;
+  }
+  .owl-carousel .owl-next {
+    right: -35px;
+  }
+  .owl-theme .owl-nav [class*=owl-] {
+    color: #ffffff;
+    font-size: 39px;
+    background: #919191;
+    border-radius: 3px;
+  }
+  .owl-carousel .prev-carousel:hover {
+    background-position: 0px -53px;
+  }
+  .owl-carousel .next-carousel:hover {
+    background-position: -24px -53px;
+  }
+
+  .owl-carousel .item img{
+    height: 240px;
+    width: 360px;
+    display: inline-block;
+    border-radius: 5px;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Applying CSS to sphere */
+.tagcloud {
+  display: inline-block;
+  left: 450px;
+  color: var(--text-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item:hover {
+  color: #757575 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
